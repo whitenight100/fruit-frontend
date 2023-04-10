@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Fruity</title>
+        <link rel="stylesheet" href="css/bootstrap/bootstrap.css">
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/ligne.css">
+        <script src="js/jquery-3.6.3.min.js"></script>
+        <script type="text/javascript" src="js/main.js"></script>
+        <style>
+            *{
+                font-family: sans-serif;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div>
+                <h1 id="title">Fruityvice</h1><br>
+            </div>
+            <div class="panel">
+                <div class="body">
+                    <div class="input-group">
+                        <label for="searchBox">Filter :</label>&nbsp;&nbsp;
+                        <input type="nameSearch" class="form-control" id="nameSearch" onkeyup="namefilter()" placeholder="Name Filter"> &nbsp;&nbsp;&nbsp;
+                        <input type="familySearch" class="form-control" id="familySearch" onkeyup="familyfilter()" placeholder="Family Filter">
+                    </div>
+                </div>
+            </div>
+
+            <table class="myTable table hover" id="mytable">
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Name</th>
+                        <th>Family</th>
+                        <th>Order</th>
+                        <th>Nuturition</th>
+                        <th>Add to favorite</th>
+                    </tr>
+                </thead>
+                <tbody id = 'fruits'>
+                    
+                </tbody>
+            </table>
+            <nav aria-label="Page navigation example">
+                <ul class="pagination">
+                </ul>
+                <button id="gotofavorite" class="btn btn-primary float-right" onclick="goFavorite()">Go To Favorite</button>
+            </nav>
+        </div>
+
+        <div id="favorite" style="display:none;">
+
+        </div>
+    </body>
+</html>
